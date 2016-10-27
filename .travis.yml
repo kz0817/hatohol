@@ -16,16 +16,16 @@ env:
     - RUN_TEST="test/run-server-test-misc.sh"
 matrix:
   include:
-    - compiler: gcc
-      env: RUN_TEST="test/run-server-test-core.sh ^test[A-C]"
-    - compiler: gcc
-      env: RUN_TEST="test/run-server-test-core.sh ^test[D]"
-    - compiler: gcc
-      env: RUN_TEST="test/run-server-test-core.sh ^test[E-H]"
-    - compiler: gcc
-      env: RUN_TEST="test/run-server-test-core.sh ^test[^A-H]"
-    - compiler: gcc
-      env: RUN_TEST="test/dist-check.sh"
+    #- compiler: gcc
+    #  env: RUN_TEST="test/run-server-test-core.sh ^test[A-C]"
+    #- compiler: gcc
+    #  env: RUN_TEST="test/run-server-test-core.sh ^test[D]"
+    #- compiler: gcc
+    #  env: RUN_TEST="test/run-server-test-core.sh ^test[E-H]"
+    #- compiler: gcc
+    #  env: RUN_TEST="test/run-server-test-core.sh ^test[^A-H]"
+    #- compiler: gcc
+    #  env: RUN_TEST="test/dist-check.sh"
     - compiler: gcc
       env: RUN_TEST="test/run-client-test.sh"
     - compiler: gcc
