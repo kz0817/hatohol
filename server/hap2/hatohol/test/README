@@ -9,4 +9,4 @@ $ PYTHONPATH=test:.. python -m unittest -v TestTransporter.TestTransporter.test_
 # sudo rabbitmqctl add_user test_user test_password
 # sudo rabbitmqctl set_permissions -p test test_user ".*" ".*" ".*"
 
-# this is a dummy line
+# this is a dummy line2
