@@ -26,8 +26,8 @@ matrix:
     #  env: RUN_TEST="test/run-server-test-core.sh ^test[^A-H]"
     #- compiler: gcc
     #  env: RUN_TEST="test/dist-check.sh"
-    - compiler: gcc
-      env: RUN_TEST="test/run-client-test.sh"
+    #- compiler: gcc
+    #  env: RUN_TEST="test/run-client-test.sh"
     - compiler: gcc
       env: RUN_TEST="test/feature-test.sh"
 
