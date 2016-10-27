@@ -6,14 +6,14 @@ notifications:
 language: cpp
 compiler:
   - gcc
-  - clang
+  #- clang
 env:
   global:
     - MLPL_LOGGER_LEVEL=WARN
     - NO_MAKE=yes
     - TEST_AMQP_URL="amqp://test_user:test_password@localhost:5673/test"
-  #matrix:
-  #  - RUN_TEST="test/run-server-test-misc.sh"
+  matrix:
+    - RUN_TEST="test/run-server-test-misc.sh"
 matrix:
   include:
     #- compiler: gcc
