@@ -6,14 +6,15 @@ notifications:
 language: cpp
 compiler:
   - gcc
-  - clang
+  #- clang
 env:
   global:
     - MLPL_LOGGER_LEVEL=WARN
     - NO_MAKE=yes
     - TEST_AMQP_URL="amqp://test_user:test_password@localhost:5673/test"
-  #matrix:
-  #  - RUN_TEST="test/run-server-test-misc.sh"
+  matrix:
+    #- RUN_TEST="test/run-server-test-misc.sh"
+    - RUN_TEST="test/feature-test.sh"
 matrix:
   include:
     #- compiler: gcc
@@ -28,8 +29,8 @@ matrix:
     #  env: RUN_TEST="test/dist-check.sh"
     #- compiler: gcc
     #  env: RUN_TEST="test/run-client-test.sh"
-    - compiler: gcc
-      env: RUN_TEST="test/feature-test.sh"
+    #- compiler: gcc
+    #  env: RUN_TEST="test/feature-test.sh"
 
 before_install:
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
