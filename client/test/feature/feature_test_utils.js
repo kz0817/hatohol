@@ -26,8 +26,17 @@ function logout(test) {
 };
 exports.logout = logout;
 
+function openSettingMenu(test) {
+  casper.waitForSelector(x("//a[normalize-space(text())='設定']"),
+    function success() {
+      this.click(x("//a[normalize-space(text())='設定']"));
+    });
+}
+exports.openSettingMenu = openSettingMenu;
+
 function moveToServersPage(test) {
   // move to servers page
+  openSettingMenu(test);
   casper.waitForSelector(x("//a[normalize-space(text())='監視サーバー']"),
     function success() {
       test.assertExists(x("//a[normalize-space(text())='監視サーバー']",
