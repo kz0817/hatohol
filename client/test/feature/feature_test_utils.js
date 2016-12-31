@@ -168,6 +168,7 @@ exports.unregisterMonitoringServer = unregisterMonitoringServer;
 
 function moveToIncidentSettingsPage(test) {
   // move to incident setting page
+  openSettingMenu(test);
   casper.waitForSelector(x("//a[normalize-space(text())='インシデント管理']"),
     function success() {
       test.assertExists(x("//a[normalize-space(text())='インシデント管理']",
@@ -360,6 +361,7 @@ function moveToDashboardPage(test) {
 exports.moveToDashboardPage = moveToDashboardPage;
 
 function moveToLogSearchSystemPage(test) {
+  util.openSettingMenu(test);
   casper.waitForSelector(x("//a[normalize-space(text())='ログ検索システム']"),
     function success() {
       test.assertExists(x("//a[normalize-space(text())='ログ検索システム']"));
