@@ -361,7 +361,7 @@ function moveToDashboardPage(test) {
 exports.moveToDashboardPage = moveToDashboardPage;
 
 function moveToLogSearchSystemPage(test) {
-  util.openSettingMenu(test);
+  openSettingMenu(test);
   casper.waitForSelector(x("//a[normalize-space(text())='ログ検索システム']"),
     function success() {
       test.assertExists(x("//a[normalize-space(text())='ログ検索システム']"));
